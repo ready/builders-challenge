@@ -1,6 +1,8 @@
-import ProjectPage from 'components/App/ProjectPages'
 import React from 'react'
 import { Link } from 'react-router-dom'
+
+import titleCase from 'utils/titleCase'
+import ProjectPage from 'components/App/ProjectPages'
 
 import styles from './Error.module.css'
 
@@ -12,13 +14,13 @@ const PageNotFound: React.FC = () => {
   return (
     <div className={styles.container}>
       <p className={styles.title}>
-        An Unexpected Error Occured
+        {titleCase('You look a little lost...')}
       </p>
       <p className={styles.subTitle}>
-        Sorry, we ran into an unexpected error. We're working hard to fix it.
+        {titleCase("It's best to stay safe on the internet")}
       </p>
       <p className={styles.message}>
-        Click the button below to refresh the page!
+        We're not sure how you got here, but let's help you find home.
       </p>
       <Link to={ProjectPage.Root}>
         <button className={styles.message}>
