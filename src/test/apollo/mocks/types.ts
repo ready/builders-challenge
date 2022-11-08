@@ -3,21 +3,6 @@ import { GraphQLResolveInfo, GraphQLScalarType, GraphQLScalarTypeConfig } from '
 // import StripeBusinessType = StripeBusinessTypeCode
 // import BossEventType = BossEventTypeCode
 
-enum StripeBusinessType {
-  COMPANY = 'company',
-  GOVERNMENT_ENTITY = 'government_entity',
-  INDIVIDUAL = 'individual',
-  NON_PROFIT = 'non_profit'
-}
-
-enum BossEventType {
-  PAYMENT_SUCCEEDED = 'payment.succeeded',
-  PAYMENT_FAILED = 'payment.failed',
-  PAYMENT_CANCELLED = 'payment.cancelled',
-  PAYMENT_REFUND_SUCCEEDED = 'payment.refund.succeeded',
-  PAYMENT_REFUND_FAILED = 'payment.refund.failed'
-}
-
 export type Maybe<T> = T | null
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] }
 export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> }
