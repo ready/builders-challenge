@@ -3,7 +3,9 @@ import React, { ErrorInfo, ReactNode } from 'react'
 import UnexpectedError from './UnexpectedError'
 
 /**
- * Currently React doesn't have a error boundary for function components
+ * Currently React doesn't have a error boundary for function components.
+ * Rather than having a thrown error crash and burn our site, we choose to
+ * catch (and handle) it here, instead
  */
 export default class RouteErrorBoundary extends React.Component<{}, { hasError: boolean }> {
   constructor (props: { children?: any }) {

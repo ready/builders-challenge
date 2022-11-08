@@ -37,7 +37,7 @@ const Button: React.FC = () => {
       {
       timesPressed > 0 &&
         <p>
-          Wowza! You've actually pressed THE Button {timesPressed} times!
+          Wowza! You've actually pressed THE Button {timesPressed} time{timesPressed === 1 ? '' : 's'}!
         </p>
       }
     </div>

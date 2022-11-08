@@ -1,5 +1,5 @@
 /**
- * When navigating between different pages on the subscriber portal,
+ * When navigating between different pages on the project,
  * use this enum to maintain consistency
  */
 enum ProjectPage {

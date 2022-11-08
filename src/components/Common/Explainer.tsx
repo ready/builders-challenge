@@ -15,7 +15,7 @@ interface ExplainerProps {
 }
 
 /**
- * renders a generic, formatted set of information to explain a circumstance
+ * renders a formatted set of information to explain a circumstance
  * to the user
  * @prop `title` - of the explainer
  * @prop `subtitle` - of the explainer
