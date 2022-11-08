@@ -42,8 +42,6 @@
 }
 .SubMenuItem:hover,
 .MenuItem:hover {
-  /* background: var(--gray94);
-  color: var(--gray0); */
   background: var(--primary50);
   color: var(--primary);
 }
@@ -79,8 +77,6 @@
   }
   .SubMenuItem:hover,
   .MenuItem:hover {
-    /* background: var(--gray94);
-    color: var(--gray0); */
     background: var(--primary50);
     color: var(--primary);
   }

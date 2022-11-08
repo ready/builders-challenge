@@ -1,33 +1,26 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
-import titleCase from 'utils/titleCase'
 import ProjectPage from 'components/App/ProjectPages'
-
-import styles from './Error.module.css'
+import Explainer from 'components/Common/Explainer'
 
 /**
- * Renders a generic 404 error component explaining to the subscriber that the
- * URL is invalid. Offers the subscriber a button back to the `/landing` route
+ * renders a heartfelt message to the user, explaining that they're lost.
+ * Offer the user a button back to `Root`
  */
 const PageNotFound: React.FC = () => {
+  const navigate = useNavigate()
+
   return (
-    <div className={styles.container}>
-      <p className={styles.title}>
-        {titleCase('You look a little lost...')}
-      </p>
-      <p className={styles.subTitle}>
-        {titleCase("It's best to stay safe on the internet")}
-      </p>
-      <p className={styles.message}>
-        We're not sure how you got here, but let's help you find home.
-      </p>
-      <Link to={ProjectPage.Root}>
-        <button className={styles.message}>
-          Back to Safety
-        </button>
-      </Link>
-    </div>
+    <Explainer
+      title='You look a little lost...'
+      button={{
+        title: 'Back to Safety',
+        handleOnClick: () => navigate(ProjectPage.Root)
+      }}
+    >
+      We're not sure how you got here, but let's help you find home.
+    </Explainer>
   )
 }
 

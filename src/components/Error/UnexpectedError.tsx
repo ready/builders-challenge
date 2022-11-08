@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './Error.module.css'
+import Explainer from 'components/Common/Explainer'
 
 /**
  * An error page that's rendered by the RouteErrorBoundary. This error page signifies
@@ -12,20 +12,16 @@ import styles from './Error.module.css'
 const UnexpectedError: React.FC<{ reset?: () => void }> = (props) => {
   const reset = (): void => window.location.reload()
   return (
-    <div className={styles.container}>
-      <p className={styles.title}>
-        An Unexpected Error Occured
-      </p>
-      <p className={styles.subTitle}>
-        Sorry, we ran into an unexpected error. We're working hard to fix it.
-      </p>
-      <p className={styles.message}>
-        Click the button below to refresh the page!
-      </p>
-      <button onClick={reset}>
-        Refresh
-      </button>
-    </div>
+    <Explainer
+      title='an unexpected error occured'
+      subtitle="We're working hard to fix it"
+      button={{
+        title: 'Refresh',
+        handleOnClick: reset
+      }}
+    >
+      Click the button below to refresh the page!
+    </Explainer>
   )
 }
 

@@ -20,18 +20,20 @@ const Button: React.FC = () => {
       <p className={styles.title}>
         Welcome to the Button Page!
       </p>
-      <p className={styles.subTitle}>
+      <p className={styles.subtitle}>
         Home of THE Button!
       </p>
       <p className={styles.message}>
-        Click the button below for no reason whatsoever!
+        Click THE button below for no reason whatsoever!
       </p>
-      <button onClick={incrementTimesPressed}>
-        I'm THE Button!
-      </button>
-      <button onClick={refresh}>
-        I'm an Imposter
-      </button>
+      <div className={styles.buttons}>
+        <button onClick={incrementTimesPressed}>
+          I'm THE Button!
+        </button>
+        <button onClick={refresh}>
+          I'm an Imposter
+        </button>
+      </div>
       {
       timesPressed > 0 &&
         <p>
