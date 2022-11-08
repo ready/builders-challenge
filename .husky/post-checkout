@@ -1,0 +1,16 @@
+#!/bin/bash                                                                      
+
+set -e
+
+grep -q GIT_AUTOMATION=true .env
+echo
+echo Updating your branch...
+git pull
+echo Updating your packages...
+npm ci
+echo Sending signal...
+touch .viteSignal.txt
+sleep 1
+echo Server ought to be restarting...
+rm .viteSignal.txt
+echo Server ought to have restarted.
