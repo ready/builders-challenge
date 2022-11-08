@@ -19,7 +19,7 @@ interface ExplainerProps {
  * to the user
  * @prop `title` - of the explainer
  * @prop `subtitle` - of the explainer
- * @prop `message` - the explanation behind the explainer
+ * @prop `children` - the explanation behind the explainer
  * @prop `button` - object with the following fields:
  * - `title` - button's visible label
  * - `onClick` - to be called when user clicks the button
