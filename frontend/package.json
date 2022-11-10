@@ -1,0 +1,135 @@
+{
+  "name": "subscriber-portal",
+  "version": "2.8.10",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@apollo/client": "^3.7.0",
+    "@hedgedoc/html-to-react": "^1.4.5",
+    "@stripe/react-stripe-js": "^1.13.0",
+    "@stripe/stripe-js": "^1.42.0",
+    "antd": "^4.21.3",
+    "antd-mask-input": "^2.0.7",
+    "apollo-upload-client": "^17.0.0",
+    "dompurify": "^2.4.0",
+    "google-map-react": "^2.2.0",
+    "graphql": "^16.6.0",
+    "logrocket": "^3.0.1",
+    "marked": "^4.1.1",
+    "moment": "^2.29.3",
+    "platform": "^1.3.6",
+    "react": "^17.0.2",
+    "react-color": "^2.19.3",
+    "react-dom": "^17.0.2",
+    "react-feather": "^2.0.10",
+    "react-responsive": "^9.0.0",
+    "react-router-dom": "^6.4.2",
+    "react-uuid": "^2.0.0",
+    "zxcvbn-typescript": "^5.0.1"
+  },
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "dev-win": "export SET NODE_OPTIONS=--openssl-legacy-provider && node scripts/start.js",
+    "build-win": "export SET NODE_OPTIONS=--openssl-legacy-provider && node scripts/build.js",
+    "test": "is-ci-cli \"test:coverage\" \"test:watch\"",
+    "test:coverage": "jest --coverage --testPathIgnorePatterns=\"src/onMainMerge.test.ts\"",
+    "test:watch": "jest --watch --testPathIgnorePatterns=\"src/onMainMerge.test.ts\"",
+    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --watch",
+    "test:staged": "jest --testPathIgnorePatterns=\"src/onMainMerge.test.ts\"",
+    "testSummary": "jest --coverage --reporters=\"summary\"",
+    "open-cov": "open ./coverage/lcov-report/index.html",
+    "deploy": "npm run build && y | gcloud app deploy",
+    "standard": "ts-standard",
+    "prepare": "husky install",
+    "lint": "ts-standard 2> /dev/null",
+    "ensureLinter": "npx ts-node .github/workflows/ensureLinter.ts"
+  },
+  "lint-staged": {
+    "**/*.+(ts|tsx|css|html|json)": [
+      "jest --findRelatedTests --passWithNoTests"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.2.0",
+    "@faker-js/faker": "^7.6.0",
+    "@graphql-tools/mock": "^8.7.8",
+    "@graphql-tools/schema": "^9.0.4",
+    "@ready.net/octogration": "^0.16.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^12.1.5",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/apollo-upload-client": "^17.0.1",
+    "@types/dompurify": "^2.3.4",
+    "@types/google-map-react": "^2.1.7",
+    "@types/jest": "^29.1.2",
+    "@types/madge": "^5.0.0",
+    "@types/marked": "^4.0.7",
+    "@types/node": "^18.11.4",
+    "@types/platform": "^1.3.4",
+    "@types/react": "^17.0.44",
+    "@types/react-color": "^3.0.6",
+    "@types/react-dom": "^17.0.14",
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.40.1",
+    "@vitejs/plugin-react": "^1.3.2",
+    "babel-preset-react-app": "^10.0.1",
+    "camelcase": "^7.0.0",
+    "dotenv": "^16.0.3",
+    "dotenv-expand": "^9.0.0",
+    "eslint": "^8.27.0",
+    "eslint-config-react-app": "^7.0.1",
+    "husky": "^8.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "is-ci-cli": "^2.2.0",
+    "jest-environment-jsdom": "^29.1.2",
+    "jest-location-mock": "^1.0.9",
+    "jest-watch-select-projects": "^2.0.0",
+    "jest-watch-typeahead": "^2.2.0",
+    "lint-staged": "^13.0.3",
+    "madge": "^5.0.1",
+    "react-dev-utils": "^12.0.1",
+    "ts-node": "^10.9.1",
+    "ts-pnp": "^1.2.0",
+    "ts-standard": "^12.0.1",
+    "typescript": "^4.8.4",
+    "vite": "^3.2.3",
+    "vite-plugin-restart": "^0.2.0",
+    "vite-tsconfig-paths": "^3.5.2"
+  },
+  "ts-standard": {
+    "globals": [
+      "fetch"
+    ],
+    "ignore": [
+      "/src/components/Auth/Recover.js",
+      "/src/components/Setup/Welcome.js",
+      "/src/components/Setup/Cart.js",
+      "/public/checkout*",
+      "/public/verifyAddress*"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  }
+}

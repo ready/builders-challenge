@@ -1,0 +1,25 @@
+@font-face {
+  font-family: SF;
+  src: url('./fonts/SF-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: SF;
+  src: url('./fonts/SF-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: SF;
+  src: url('./fonts/SF-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: SF;
+  src: url('./fonts/SF-Light.ttf') format('truetype');
+  font-weight: lighter;
+}
+
+html, body {
+  font-family: 'Karla', SF, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif !important;
+}
