@@ -10,34 +10,6 @@
   --secondary200: #66d43d50;
   --secondary100: #66d43d30;
 
-  /* Colors */
-  --red: #d63031;
-  --lightred: #d6303120;
-  --red200: #d6303140;
-  --orange: #e17055;
-  --lightorange: #e1705520;
-  --orange200: #e1705540;
-  --yellow: #fdcb6e;
-  --lightyellow: #fdcb6e20;
-  --yellow200: #fdcb6e40;
-  --green: #27ae60; /* for active planCard */
-  --lightgreen: #27ae5f20; /* for active planCard background */
-  --green200: #27ae5f40;
-  --blue: #0984e3;
-  --lightblue: #0984e320;
-  --blue200: #0984e340;
-  --purple: #6c5ce7;
-  --lightpurple: #6c5ce720;
-  --purple200: #6c5ce740;
-  /* The following are sufficiently high in contrast
-     for AA text against a plain white background */
-  --hyperlinkColor: #0076cc;
-  --acceptedGreen: #008a00; /* when displaying good things, IE payment method is verified */
-  --warningOrange: #A36A00; /* when displaying caution; IE an expiring payment method */
-  --iconOrange: #B19120; /* when displaying an icon */
-  --rejectedRed: #ee0000; /* when displaying bad things, IE payment method unverified */
-  --subtitleGray: #767676;
-
   /* Shades */
   /* --white100: #F5F6FB; */
   --white100: hsl(0deg, 0%, 98%);
