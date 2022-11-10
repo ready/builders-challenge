@@ -9,7 +9,7 @@ import React from 'react'
 const Page: React.FC = () => {
   return (
     <Explainer
-      title="This is a sample page"
+      title='This is a sample page'
       subtitle='consider it a playground, if you will'
     >
       This is a sample page placed here to provide you with ample examples to create your own new page(s)!

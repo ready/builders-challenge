@@ -8,6 +8,9 @@
       "frontend/src"
     ]
   },
+  "lint-staged": {
+    "*.ts": "npx ts-standard"
+  },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@apollo/client": "^3.7.0",
