@@ -3,8 +3,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import RouteErrorBoundary from 'components/Error/RouteErrorBoundary'
 import LandingPageWrapper from 'components/LandingPage/LandingPage'
-import PageNotFound from 'components/Error/404'
 import ButtonWrapper from 'components/ButtonPage/Button'
+import Sample01Wrapper from 'components/SamplePage01/Page'
+import Sample02Wrapper from 'components/SamplePage02/Page'
+import PageNotFound from 'components/Error/404'
 
 import ProjectPage from './ProjectPages'
 
@@ -18,6 +20,8 @@ const App: React.FC = () => {
       <Routes>
         <Route path={ProjectPage.Root} element={<RouteErrorBoundary><LandingPageWrapper /></RouteErrorBoundary>} />
         <Route path={ProjectPage.Button} element={<RouteErrorBoundary><ButtonWrapper /></RouteErrorBoundary>} />
+        <Route path={ProjectPage.Sample01} element={<RouteErrorBoundary><Sample01Wrapper /></RouteErrorBoundary>} />
+        <Route path={ProjectPage.Sample02} element={<RouteErrorBoundary><Sample02Wrapper /></RouteErrorBoundary>} />
         <Route path={ProjectPage.None} element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>

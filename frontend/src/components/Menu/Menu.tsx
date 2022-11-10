@@ -20,7 +20,7 @@ import ProjectPage from 'components/App/ProjectPages'
  * - `Get Help` - name to be used when referencing the trigger to our chatbot
  * - `Logout` - name to be used when referencing the trigger to log the client out
  */
-export type MenuTabName = 'Home' | 'Button' | 'none'
+export type MenuTabName = 'Home' | 'Button' | 'Page 01' | 'Page 02' | 'none'
 
 interface MenuProps {
   active: MenuTabName
@@ -118,6 +118,16 @@ function useTopMenuRoutes (): MenuTab[] {
       name: 'Button',
       onClick: () => navigate(ProjectPage.Button),
       icon: <PlayCircleOutlined style={{ fontSize: 22 }} />
+    },
+    {
+      name: 'Page 01',
+      onClick: () => navigate(ProjectPage.Sample01),
+      icon: <DashboardOutlined style={{ fontSize: 22 }} />
+    },
+    {
+      name: 'Page 02',
+      onClick: () => navigate(ProjectPage.Sample02),
+      icon: <DashboardOutlined style={{ fontSize: 22 }} />
     }
   ]
 

@@ -5,6 +5,8 @@
 enum ProjectPage {
   Root = '/',
   Button = '/button',
+  Sample01 = '/01',
+  Sample02 = '/02',
   None = '*'
 }
 

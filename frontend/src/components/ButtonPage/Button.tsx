@@ -5,7 +5,6 @@ import styles from './Button.module.css'
 
 /**
  * Renders THE button!
- * TODO: Have the button's count persist between page refreshes.
  */
 const Button: React.FC = () => {
   const [timesPressed, setTimesPressed] = useState(0)
