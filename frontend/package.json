@@ -2,16 +2,6 @@
   "name": "frontend-builder-challenge",
   "version": "0.0.1",
   "private": true,
-  "jest": {
-    "moduleDirectories": [
-      "node_modules",
-      "frontend/src"
-    ]
-  },
-  "lint-staged": {
-    "*.ts": "npx ts-standard",
-    "*.tsx": "npx ts-standard"
-  },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@apollo/client": "^3.7.0",
@@ -55,6 +45,11 @@
     "prepare": "cd .. && husky install frontend/.husky",
     "lint": "ts-standard 2> /dev/null",
     "ensureLinter": "npx ts-node ../.github/workflows/ensureLinter.ts"
+  },
+  "lint-staged": {
+    "**/*.+(ts|tsx|css|html|json)": [
+      "jest --findRelatedTests --passWithNoTests"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -112,6 +107,7 @@
     "lint-staged": "^13.0.3",
     "madge": "^5.0.1",
     "react-dev-utils": "^12.0.1",
+    "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1",
     "ts-pnp": "^1.2.0",
     "ts-standard": "^12.0.1",

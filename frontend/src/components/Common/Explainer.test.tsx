@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import * as React from 'react'
 import { fireEvent, render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -33,6 +36,6 @@ test('Explanation component renders buttonless content correctly when title, sub
 
 test('Explanation component renders button with correct onClick function', () => {
   const dom = render(<Explainer title={title} button={{ title, handleOnClick: mockOnClick }}>{children}</Explainer>)
-  fireEvent.mouseOver(dom.getByText(title))
+  fireEvent.click(dom.getByText(title))
   expect(mockOnClick).toBeCalledTimes(1)
 })
