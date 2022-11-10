@@ -46,6 +46,18 @@
     "lint": "ts-standard 2> /dev/null",
     "ensureLinter": "npx ts-node ../.github/workflows/ensureLinter.ts"
   },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironemnt": "node",
+    "moduleDirectories": [
+      "node_modules",
+      "frontend/src"
+    ],
+    "moduleNameMapper": {
+      "\\.module\\.css$": "identity-obj-proxy",
+      "\\.(css|svg)$": {}
+    }
+  },
   "lint-staged": {
     "**/*.+(ts|tsx|css|html|json)": [
       "jest --findRelatedTests --passWithNoTests"
