@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths'
-import ViteRestart from 'vite-plugin-restart'
 import { execSync } from 'child_process'
 import { readFileSync } from 'fs'
 
@@ -21,10 +20,7 @@ function readChangelogFile () {
 export default defineConfig({
   plugins: [
     react(),
-    tsconfigPaths(),
-    ViteRestart({
-      restart: ['.viteSignal.txt']
-    })
+    tsconfigPaths()
   ],
   loader: { '.js': 'jsx' },
   define: {
