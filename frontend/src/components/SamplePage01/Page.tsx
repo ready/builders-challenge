@@ -14,6 +14,8 @@ const Page: React.FC = () => {
     >
       This is a sample page placed here to provide you with ample examples to create your own new page(s)!
       This page is, by default, mapped to route '/01'. Feel free to modify this example however you'd like!
+
+      On this page, we even find ourselves a second paragraph! Revolutionary.
     </Explainer>
   )
 }
