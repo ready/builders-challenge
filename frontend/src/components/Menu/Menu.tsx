@@ -13,13 +13,13 @@ import ProjectPage from 'components/App/ProjectPages'
 /**
  * The various types of pages that are linked to the main navigation menu
  * subscribers use to navigate the portal:
- * - `Dashboard` - name to be used when referencing the `/dashboard` route
- * - `Billing` - name to be used when referencing the `/billing` route
- * - `Subscription` - name to be used when referencing the `/subscription` route
- * - `Affordability` - name to be used when referencing the `/acp` route
- * - `Settings` - name to be used when referencing the `/settings` route
- * - `Get Help` - name to be used when referencing the trigger to our chatbot
- * - `Logout` - name to be used when referencing the trigger to log the client out
+ * - `Home` - name to be used when referencing the `/` route
+ * - `Button` - name to be used when referencing the `/button` route
+ * - `Samples` - name to be used to house the submenus `Page 01` and `Page 02`
+ * - `Page 01` - name to be used when referencing the `/01` route
+ * - `Page 02` - name to be used when referencing the `/02` route
+ * - `none` - name to be used as default. Never actually intended to be given
+ * as a valid menu option
  */
 export type MenuTabName = 'Home' | 'Button' | 'Samples' | 'Page 01' | 'Page 02' | 'none'
 
