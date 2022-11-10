@@ -3,7 +3,8 @@ import { Menu as AntdMenu } from 'antd'
 import { useNavigate } from 'react-router-dom'
 import {
   DashboardOutlined,
-  PlayCircleOutlined
+  PlayCircleOutlined,
+  SwapRightOutlined
 } from '@ant-design/icons'
 
 import styles from './Menu.module.css'
@@ -20,7 +21,7 @@ import ProjectPage from 'components/App/ProjectPages'
  * - `Get Help` - name to be used when referencing the trigger to our chatbot
  * - `Logout` - name to be used when referencing the trigger to log the client out
  */
-export type MenuTabName = 'Home' | 'Button' | 'Page 01' | 'Page 02' | 'none'
+export type MenuTabName = 'Home' | 'Button' | 'Samples' | 'Page 01' | 'Page 02' | 'none'
 
 interface MenuProps {
   active: MenuTabName
@@ -120,14 +121,21 @@ function useTopMenuRoutes (): MenuTab[] {
       icon: <PlayCircleOutlined style={{ fontSize: 22 }} />
     },
     {
-      name: 'Page 01',
-      onClick: () => navigate(ProjectPage.Sample01),
-      icon: <DashboardOutlined style={{ fontSize: 22 }} />
-    },
-    {
-      name: 'Page 02',
-      onClick: () => navigate(ProjectPage.Sample02),
-      icon: <DashboardOutlined style={{ fontSize: 22 }} />
+      name: 'Samples',
+      onClick: () => {},
+      icon: <SwapRightOutlined style={{ fontSize: 22 }} />,
+      subTabs: [
+        {
+          name: 'Page 01',
+          onClick: () => navigate(ProjectPage.Sample01),
+          icon: <SwapRightOutlined style={{ fontSize: 22 }} />
+        },
+        {
+          name: 'Page 02',
+          onClick: () => navigate(ProjectPage.Sample02),
+          icon: <SwapRightOutlined style={{ fontSize: 22 }} />
+        }
+      ]
     }
   ]
 
