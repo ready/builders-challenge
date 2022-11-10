@@ -1,5 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-git rev-parse --abbrev-ref HEAD | grep -v -q "main" && npx --no -- commitlint --edit "${1}"
-npx lint-staged
