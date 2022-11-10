@@ -9,7 +9,8 @@
     ]
   },
   "lint-staged": {
-    "*.ts": "npx ts-standard"
+    "*.ts": "npx ts-standard",
+    "*.tsx": "npx ts-standard"
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
