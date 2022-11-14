@@ -43,12 +43,11 @@
     "deploy": "npm run build && y | gcloud app deploy",
     "standard": "ts-standard",
     "prepare": "cd .. && husky install frontend/.husky",
-    "lint": "ts-standard 2> /dev/null",
-    "ensureLinter": "npx ts-node ../.github/workflows/ensureLinter.ts"
+    "lint": "ts-standard 2> /dev/null"
   },
   "jest": {
     "preset": "ts-jest",
-    "testEnvironemnt": "node",
+    "testEnvironment": "node",
     "moduleDirectories": [
       "node_modules",
       "frontend/src"
@@ -84,7 +83,6 @@
     "@faker-js/faker": "^7.6.0",
     "@graphql-tools/mock": "^8.7.8",
     "@graphql-tools/schema": "^9.0.4",
-    "@ready.net/octogration": "^0.16.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^12.1.5",
     "@types/apollo-upload-client": "^17.0.1",

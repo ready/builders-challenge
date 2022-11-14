@@ -1,13 +1,6 @@
 import * as React from 'react'
 import { RenderResult, render as rtlRender } from '@testing-library/react'
-import { MemoryRouter } from 'react-router-dom'
-import ApolloMockedProvider from './apollo/MockedProviderWrapper'
-import { MockReturnType } from './apollo/mocks/createMock'
-import { AppProvider } from 'context/AppProvider'
-import { AuthProvider } from 'context/AuthContext'
 import { ErrorStateProvider } from 'context/ErrorStateContext'
-import * as fakeData from './apollo/mocks/fakeData'
-import PortalPage from 'components/App/PortalPages'
 
 interface WrapperProps {
   /** react children to render */
@@ -15,8 +8,6 @@ interface WrapperProps {
 }
 
 interface OptionsType {
-  /** List of mock objects that we expect will be called by the components we're testing */
-  mocks?: MockReturnType[]
   /** An array of initial entries to the MemoryRouter provider. Default is [PortalPage.Root] */
   initialEntries?: string[]
   /** Any props we wanna pass on to AppProvider */
@@ -34,8 +25,6 @@ interface OptionsType {
   */
 const render = (ui: React.ReactElement<any>, options: OptionsType = {}): RenderResult => {
   const {
-    mocks = [],
-    initialEntries = [PortalPage.Root],
     ...wrapperOptions
   } = options
   /** A component that wraps any children it receives with the various
@@ -45,15 +34,7 @@ const render = (ui: React.ReactElement<any>, options: OptionsType = {}): RenderR
   const Wrapper = ({ children }: WrapperProps): JSX.Element => {
     return (
       <ErrorStateProvider>
-        <AuthProvider>
-          <ApolloMockedProvider mocks={mocks}>
-            <AppProvider initialOrgId={fakeData.fakeOrganization.id}>
-              <MemoryRouter initialEntries={initialEntries}>
-                {children}
-              </MemoryRouter>
-            </AppProvider>
-          </ApolloMockedProvider>
-        </AuthProvider>
+        {children}
       </ErrorStateProvider>
     )
   }

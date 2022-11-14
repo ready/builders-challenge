@@ -29,9 +29,9 @@ interface MenuProps {
 }
 
 /**
- * Renders the menu allowing the subscriber to efficiently navigate the portal
- * @prop `active` - the `menuTabName` of the subscriber's active tab
- * @prop `isMobile` - true iff the subscriber is on mobile
+ * Renders the menu allowing the user to efficiently navigate the site
+ * @prop `active` - the `menuTabName` of the user's active tab
+ * @prop `isMobile` - true iff the user is on mobile
  */
 const Menu: React.FC<MenuProps> = props => {
   const topMenuRoutes = useTopMenuRoutes()
