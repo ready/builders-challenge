@@ -102,3 +102,22 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Deploy
+deploy.zip
+
+# VS Code files
+.vscode
+
+# Web Build
+build
+
+# DS_Store
+.DS_Store
+public/antd-backup.css
+
+# Github actions data
+.github/data
+
+# Used to reload `vite` post-checkout
+.viteSignal.txt

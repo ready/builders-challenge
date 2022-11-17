@@ -1,0 +1,33 @@
+runtime: nodejs16
+# - url: /(.*)$
+#   static_files: dist/\1
+#   upload: dist/(.*)
+# - url: /*
+#   static_files: dist/index.html
+#   upload: dist/index.html
+# - url: /
+#   static_files: dist/index.html
+#   upload: dist/index.html
+
+handlers:
+  - url: /static
+    static_dir: dist/static
+    secure: always
+  - url: /assets
+    static_dir: dist/assets
+    secure: always
+  - url: /fonts
+    static_dir: dist/fonts
+    secure: always
+  - url: /(.*\.(json|ico|js|html|png|txt|css|ttf))$
+    static_files: dist/\1
+    upload: dist/.*\.(json|ico|js|html|png|txt|css|ttf)$
+    secure: always
+  - url: .*
+    static_files: dist/index.html
+    upload: dist/index.html
+    secure: always
+  - url: /
+    static_files: dist/index.html
+    upload: dist/index.html
+    secure: always
