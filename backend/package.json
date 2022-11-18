@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "esbuild server/index.ts --bundle --platform=node --outfile=build/index.js",
+    "start": "node build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@graphql-tools/schema": "^9.0.9",
+    "@graphql-tools/stitch": "^8.7.21",
+    "graphql": "^15.8.0",
+    "graphql-yoga": "^3.0.0-next.10",
+    "knex": "^2.3.0",
+    "objection": "^3.0.1",
+    "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "esbuild": "^0.15.13",
+    "esbuild-node-tsc": "^2.0.4",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1"
+  }
+}

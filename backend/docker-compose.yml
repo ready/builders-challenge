@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: kartoza/postgis
+    build:
+      context: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${PG_USER:-builder}
+      POSTGRES_PASS: ${PG_PASSWORD:-builderschallenge}
+      POSTGRES_DB: ${PG_DATABASE:-db_local}
+      POSTGRES_MULTIPLE_EXTENSIONS: uuid-ossp,postgis,postgis_topology,postgis_raster,postgis_tiger_geocoder,fuzzystrmatch,address_standardizer,address_standardizer_data_us,fuzzystrmatch,plpgsql
+    ports:
+      - "${PG_PORT:-5432}:5432"
+    volumes:
+      - boss-postgres-db:/var/lib/postgresql
+    networks:
+      - main
+
+  redis:
+    image: redis:alpine
+    command: redis-server
+    restart: always
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - $PWD/redis-data:/var/lib/redis
+      - $PWD/redis.conf:/usr/local/etc/redis/redis.conf
+    environment:
+     - REDIS_REPLICATION_MODE=master
+    networks:
+      - main
+
+volumes:
+  boss-postgres-db:
+    driver: local
+
+networks:
+  main:
+    driver: bridge

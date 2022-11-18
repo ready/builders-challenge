@@ -109,7 +109,7 @@ deploy.zip
 # VS Code files
 .vscode
 
-# Web Build
+# Web Build & esbuild
 build
 
 # DS_Store

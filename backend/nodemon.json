@@ -1,0 +1,6 @@
+{
+  "watch": ["server"],
+  "ext": "ts,mjs,js,json,graphql",
+  "exec": "etsc && node ./build/index.js",
+  "legacyWatch": true
+}
