@@ -7,9 +7,9 @@ services:
       context: postgres
     restart: always
     environment:
-      POSTGRES_USER: ${PG_USER:-ready}
-      POSTGRES_PASS: ${PG_PASSWORD:-readyboss}
-      POSTGRES_DB: ${PG_DATABASE:-boss_db_local}
+      POSTGRES_USER: ${PG_USER:-builder}
+      POSTGRES_PASS: ${PG_PASSWORD:-builderschallenge}
+      POSTGRES_DB: ${PG_DATABASE:-db_local}
       POSTGRES_MULTIPLE_EXTENSIONS: uuid-ossp,postgis,postgis_topology,postgis_raster,postgis_tiger_geocoder,fuzzystrmatch,address_standardizer,address_standardizer_data_us,fuzzystrmatch,plpgsql
     ports:
       - "${PG_PORT:-5432}:5432"
