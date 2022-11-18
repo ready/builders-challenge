@@ -1,0 +1,181 @@
+:root {
+  /* Theme */
+  --primary: hsl(0deg, 0%, 23%);
+  --primaryDark: hsl(0deg, 0%, 8%);
+  --primary600: hsl(0deg, 0%, 31%);
+  --primary200: hsl(0deg, 0%, 50%);
+  --primary100: hsl(0deg, 0%, 80%);
+  --primary50: hsl(0deg, 0%, 90%);
+  --secondary: #66d43d;
+  --secondary200: #66d43d50;
+  --secondary100: #66d43d30;
+
+  /* Shades */
+  /* --white100: #F5F6FB; */
+  --white100: hsl(0deg, 0%, 98%);
+  --white200: #edeef3; /* for darker background */
+  --white300: #e5e6eb;
+  --white400: #ddd;
+  --lightgray: #aaa;
+  --gray: #888; /* for muted text */
+  --darkgray: #567;
+  --black400: #456;
+  --black300: #345;
+  --black200: #234;
+  --black100: #123;
+
+  /* Shadows */
+  --shadow3: 0 5px 12px #3332; /* for login pages container */
+  --shadow2: 0 3px 8px #3332;
+  --shadow1: 0 2px 4px #6673;
+
+  /* Border Radius */
+  --radius: 6px;
+
+  /* Grays - grayX where X = transparency */
+  --gray0: hsl(0deg, 0%, 0%);
+  --gray10: hsl(0deg, 0%, 10%);
+  --gray25: hsl(0deg, 0%, 25%);
+  --gray50: hsl(0deg, 0%, 50%);
+  --gray53: hsl(0deg, 0%, 53%); /* gray */
+  --gray67: hsl(0deg, 0%, 67%); /* lightgray */
+  --gray80: hsl(0deg, 0%, 80%);
+  --gray91: hsl(0deg, 0%, 91%); /* white300 */
+  --gray94: hsl(0deg, 0%, 94%); /* white200 */
+  --gray98: hsl(0deg, 0%, 98%); /* white100 */
+  --gray100: hsl(0deg, 0%, 100%);
+
+  /* Text Colors */
+  --text0: hsl(0deg, 0%, 0%);
+  --text20: hsl(0deg, 0%, 20%);
+  --text30: hsl(0deg, 0%, 30%);
+  --text40: hsl(0deg, 0%, 40%);
+}
+
+:any-link {
+  color: var(--hyperlinkColor);
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--black);
+}
+
+code {
+  font-family: "Nunito", source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+sup {
+  font-size: 65%;
+  font-weight: normal;
+}
+
+/* ant design */
+.input-icon {
+  margin-right: 6px;
+}
+.ant-btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.ant-checkbox-light {
+  color: white;
+}
+.ant-checkbox-light .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: white;
+  border-color: white;
+}
+.ant-checkbox-light .ant-checkbox-checked .ant-checkbox-inner::after {
+  border-color: var(--primary);
+}
+.ant-checkbox-group-item {
+  display: block;
+  margin: 6px 0 !important;
+}
+
+.ant-menu-item .anticon,
+.ant-menu-submenu-title .anticon {
+  vertical-align: middle;
+  margin-right: 12px;
+}
+.ant-menu-item .anticon + span,
+.ant-menu-submenu-title .anticon + span {
+  vertical-align: middle;
+  font-size: 16px;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background: var(--primary100);
+  color: var(--primary);
+  /* background: hsl(0deg, 0%, 90%); */
+  /* color: hsl(0deg, 0%, 0%); */
+  font-weight: 500;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected::after {
+  display: none;
+  content: "";
+}
+.ant-menu-inline .ant-menu-item {
+  margin-bottom: 0px !important;
+}
+.ant-menu-inline .ant-menu-item:last-of-type {
+  margin-bottom: 16px !important;
+}
+
+.ant-slider-with-marks {
+  margin-top: 16px;
+}
+.ant-collapse
+  > .ant-collapse-item.ant-collapse-no-arrow
+  > .ant-collapse-header {
+  padding: 0;
+}
+.ant-collapse-ghost
+  > .ant-collapse-item
+  > .ant-collapse-content
+  > .ant-collapse-content-box {
+  padding: 0;
+}
+
+/* freshchat custom style */
+.h-chat-custom .h-conv .h-header {
+  background: var(--secondary) !important;
+}
+
+.d-hotline {
+  background-color: var(--secondary) !important;
+  border-color: transparent var(--secondary) transparent transparent !important;
+}
+
+/* Google places formatter */
+.pac-container:after {
+  content: none !important;
+  cursor: pointer !important;
+}
+
+.pac-icon {
+  display: none !important;
+}
+
+.pac-container {
+  font-family: SF !important;
+  border-radius: 4px;
+  padding: 6px 0;
+  border-top: none;
+}
+
+.pac-item {
+  padding: 0 12px !important;
+  border-top: none !important;
+}
+
+@media screen and (max-width: 730px) {
+  .ant-menu-inline .ant-menu-item:last-of-type {
+    margin-bottom: 0 !important;
+  }
+}
