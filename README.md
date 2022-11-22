@@ -1,20 +1,59 @@
 # Builders Challenges
-Builders challenges for prospective ready engineering candidates
+Builders challenges for ready engineering candidates
+
+## Getting setup
+
+### 1. Clone this repository
+```
+git clone https://github.com/ready/builders-challenge.git
+```
+
+### 2. Setup backend
+1. Navigate to backend directory
+  - `cd backend` (assuming current working directory is builders-challenge)
+2. Install [docker](https://docs.docker.com/get-docker/)
+3. Start docker
+2. Start postgres and redis with docker compose
+  - `docker compose up`
+3. Run knex postgres migrations 
+  - `npm run knex migrate:latest`
+4. Install npm dependencies
+  - `npm i`
+5. Start graphql webserver
+  - `npm run dev`
+
+### 3. Setup frontend
+1. Navigate to frontend directory
+  - `cd frontend` (assuming current working directory is builders-challenge)
+2. Install npm dependencies
+  - `npm i`
+3. Start development server
+  - `npm run dev`
+
+### 4. Complete applicable challenges
+- Make changes to the codebase needed to satisfy task requirements
+- Your builders challenge invitation email should specify which challenges concern you
+
+### 5. Submit your changes
+- Complete your selected challenges by zipping up your local repository and replying to builders challenge invitation email with your zipped repository attatched
 
 ## Challenges
+
 ### Backend
+- [⚙️ Implement user CRUD resolvers](https://github.com/ready/builders-challenge/issues/4)
+- [⚙️ Implement user authentication](https://github.com/ready/builders-challenge/issues/5)
+- [⚙️ Implement a redis resolver cache](https://github.com/ready/builders-challenge/issues/6)
+- [⚙️ Implement usersWithinBoundingBox resolver](https://github.com/ready/builders-challenge/issues/8)
+- [🐞 Backend bug](https://github.com/ready/builders-challenge/issues/7)
+
 ### Frontend
-### Data
-### Development Operations
 
 ## Completing these challenges
-- Clone this repository on your machine locally
-- Complete the challenge in question
+- Clone this repository
+- Complete the challenges in question
 - Write a textual file explaning your changes and include it in the corresponding challenge subdirectory
-- Zip up the local version of this repository and send it to your Ready contact
+- Zip up your local repository and reply to builders challenge invitation email with your zipped repository attatched
 
 ## Adding a new challenge
-- Create a new subdirectory in the root of this repository for housing the new challenge
-- Develop architecture and files needed to complete the challenge
-- Write a detailed readme on how to complete the challenge and initial setup instructions
-
+- Make any changes to existing files and templates needed to complete the challenge
+- Write a detailed GitHub issue on how to complete the challenge and any additional initial setup instructions
