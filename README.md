@@ -44,7 +44,6 @@ git clone https://github.com/ready/builders-challenge.git
 - [⚙️ Implement user authentication](https://github.com/ready/builders-challenge/issues/5)
 - [⚙️ Implement a redis resolver cache](https://github.com/ready/builders-challenge/issues/6)
 - [⚙️ Implement usersWithinBoundingBox resolver](https://github.com/ready/builders-challenge/issues/8)
-- [🐞 Backend bug](https://github.com/ready/builders-challenge/issues/7)
 
 ### Frontend
 
