@@ -9,10 +9,10 @@ import React from 'react'
 const LandingPage: React.FC = () => {
   return (
     <Explainer
-      title="Welcome the the builder's challenge!"
+      title="Welcome to the builder's challenge!"
       subtitle='for prospective frontend engineers'
     >
-      This is a sample repo (and task) that allows us to gauge your mastery of the tools we use to build our frontend
+      This is a sample repo (and tasks) that allow us to gauge your mastery of the tools we use to build our frontend
       projects. Additionally, you'll notice that we have specific styles that our repos strictly enforce - you'll
       pick up on them quickly enough! They may seem silly for such small tasks like these, but trust us: it makes a
       HUGE difference at scale!

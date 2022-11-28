@@ -7,6 +7,7 @@ enum ProjectPage {
   Button = '/button',
   Sample01 = '/01',
   Sample02 = '/02',
+  Quiz = '/quiz',
   None = '*'
 }
 

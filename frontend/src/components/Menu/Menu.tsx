@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom'
 import {
   DashboardOutlined,
   PlayCircleOutlined,
-  SwapRightOutlined
+  SwapRightOutlined,
+  EditOutlined
 } from '@ant-design/icons'
 
 import styles from './Menu.module.css'
@@ -21,7 +22,7 @@ import ProjectPage from 'components/App/ProjectPages'
  * - `none` - name to be used as default. Never actually intended to be given
  * as a valid menu option
  */
-export type MenuTabName = 'Home' | 'Button' | 'Samples' | 'Page 01' | 'Page 02' | 'none'
+export type MenuTabName = 'Home' | 'Quiz' | 'Button' | 'Samples' | 'Page 01' | 'Page 02' | 'none'
 
 interface MenuProps {
   active: MenuTabName
@@ -114,13 +115,15 @@ function useTopMenuRoutes (): MenuTab[] {
       name: 'Home',
       onClick: () => navigate(ProjectPage.Root),
       icon: <DashboardOutlined style={{ fontSize: 22 }} />
-    },
-    {
+    }, {
+      name: 'Quiz',
+      onClick: () => navigate(ProjectPage.Quiz),
+      icon: <EditOutlined style={{ fontSize: 22 }} />
+    }, {
       name: 'Button',
       onClick: () => navigate(ProjectPage.Button),
       icon: <PlayCircleOutlined style={{ fontSize: 22 }} />
-    },
-    {
+    }, {
       name: 'Samples',
       onClick: () => {},
       icon: <SwapRightOutlined style={{ fontSize: 22 }} />,
@@ -129,8 +132,7 @@ function useTopMenuRoutes (): MenuTab[] {
           name: 'Page 01',
           onClick: () => navigate(ProjectPage.Sample01),
           icon: <SwapRightOutlined style={{ fontSize: 22 }} />
-        },
-        {
+        }, {
           name: 'Page 02',
           onClick: () => navigate(ProjectPage.Sample02),
           icon: <SwapRightOutlined style={{ fontSize: 22 }} />
