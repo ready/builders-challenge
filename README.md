@@ -15,11 +15,12 @@ git clone https://github.com/ready/builders-challenge.git
 3. Start docker
 2. Start postgres and redis with docker compose
   - `docker compose up`
-3. Run knex postgres migrations 
-  - `npm run knex migrate:latest`
 4. Install npm dependencies
   - `npm i`
-5. Start graphql webserver
+
+5. Run knex postgres migrations 
+  - `npm run knex migrate:latest`
+6. Start graphql webserver
   - `npm run dev`
 
 ### 3. Setup frontend
