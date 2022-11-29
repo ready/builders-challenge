@@ -108,13 +108,6 @@
   "ts-standard": {
     "globals": [
       "fetch"
-    ],
-    "ignore": [
-      "/src/components/Auth/Recover.js",
-      "/src/components/Setup/Welcome.js",
-      "/src/components/Setup/Cart.js",
-      "/public/checkout*",
-      "/public/verifyAddress*"
     ]
   },
   "babel": {
