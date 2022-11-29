@@ -1,0 +1,14 @@
+.contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+.text {
+  font-size: 24px;
+  color: var(--gray67);
+  margin-top: 16px;
+}
