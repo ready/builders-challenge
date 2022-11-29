@@ -7,11 +7,11 @@ import { useContainerDimensions } from 'hooks/useContainerDimensions'
 
 import { useQuizContext } from './QuizContext'
 
+import MarioBrothersName from './MarioBrotherName/MarioBrothersName'
+import PikachuType from './PikachuType/PikachuType'
+import MinecraftStack from './MinecraftStack/MinecraftStack'
+import Villans from './Villans/Villans'
 import styles from './Quiz.module.css'
-import MarioBrothersName from 'components/Quiz/MarioBrotherName/MarioBrothersName'
-import PikachuType from 'components/Quiz/PikachuType/PikachuType'
-import SplatoonVersion from 'components/Quiz/SplatoonVersion/SplatoonVersion'
-import Villans from 'components/Quiz/Villans/Villans'
 
 /**
  * Renders the actual ACP application. The heart of Turnkey ACP
@@ -44,7 +44,7 @@ const Quiz: React.FC = () => {
     <>
       <Step step={0} attachedRef={scrollRefs[0]}><MarioBrothersName /></Step>
       <Step step={1} attachedRef={scrollRefs[1]}><PikachuType /></Step>
-      <Step step={2} attachedRef={scrollRefs[2]}><SplatoonVersion /></Step>
+      <Step step={2} attachedRef={scrollRefs[2]}><MinecraftStack /></Step>
       <Step step={3} attachedRef={scrollRefs[3]}><Villans /></Step>
       <div className={styles.continueContain} style={{ marginBottom: `${maxScrollHeight}px` }}>
         <Button
@@ -52,7 +52,7 @@ const Quiz: React.FC = () => {
           type='primary'
           onClick={() => stepper.forward()}
         >
-          {step === stepper.getEndStep() ? 'Submit Answers' : 'Continue'}
+          {step === stepper.getEndStep() - 1 ? 'Submit Answers' : 'Continue'}
         </Button>
       </div>
     </>

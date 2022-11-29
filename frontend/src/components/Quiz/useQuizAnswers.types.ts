@@ -1,4 +1,11 @@
 
+export enum VillanName {
+  Kirby,
+  Bowser,
+  Zelda,
+  Ganondorf
+}
+
 export enum PokemonType {
   Normal,
   Fire,

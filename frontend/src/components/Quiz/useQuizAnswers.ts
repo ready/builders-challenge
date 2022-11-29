@@ -9,8 +9,8 @@ export interface QuizAnswersHook {
   setPikachusType: (type: any) => void
   getPikachusType: () => PokemonType | undefined
 
-  setSplatoonVersion: (version: any) => void
-  getSplatoonVersion: () => string | undefined
+  setMinecraftStack: (version: any) => void
+  getMinecraftStack: () => string | undefined
 
   setVillans: (villans: any) => void
   getVillans: () => string[] | undefined
@@ -23,7 +23,7 @@ export interface QuizAnswersHook {
 export const useQuizAnswers = (): QuizAnswersHook => {
   const [marioBrothersName, setMarioBrothersName] = useState(undefined as undefined | string)
   const [pikachusType, setPikachusType] = useState(undefined as undefined | PokemonType)
-  const [splatoonVersion, setSplatoonVersion] = useState(undefined as undefined | string)
+  const [minecraftStack, setMinecraftStack] = useState(undefined as undefined | string)
   const [villans, setVillans] = useState(undefined as undefined | string[])
 
   return {
@@ -33,8 +33,8 @@ export const useQuizAnswers = (): QuizAnswersHook => {
     setPikachusType,
     getPikachusType: () => pikachusType,
 
-    setSplatoonVersion,
-    getSplatoonVersion: () => splatoonVersion,
+    setMinecraftStack,
+    getMinecraftStack: () => minecraftStack,
 
     setVillans,
     getVillans: () => villans
