@@ -15,6 +15,8 @@ git clone https://github.com/ready/builders-challenge.git
 3. Start docker
 2. Start postgres and redis with docker compose
   - `docker compose up`
+3. Copy `.env.keep` to `.env`
+  - `cp .env.keep .env`
 3. Run knex postgres migrations 
   - `npm run knex migrate:latest`
 4. Install npm dependencies
