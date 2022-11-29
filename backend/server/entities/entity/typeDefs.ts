@@ -17,7 +17,7 @@ export default `
   
   type Mutation {
     createEntity(entity: EntityInput!): Entity!
-    updateEntity(id: ID! entity: EntityInput): Entity!
+    updateEntity(id: ID! entity: EntityInput): Entity
     deleteEntity(id: ID!): Boolean!
   }
 `
