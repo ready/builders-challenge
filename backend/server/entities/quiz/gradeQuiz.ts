@@ -21,12 +21,12 @@ export interface QuizGrade {
 export const gradeQuiz = ({ args }: { args: { quiz: QuizAnswers } }): QuizGrade => {
   const answers = args.quiz
   return {
-    marioBrothersName: answers.marioBrothersName === 'luigi',
-    pikachuType: answers.pikachuType === 'electric',
+    marioBrothersName: answers.marioBrothersName === 'Luigi',
+    pikachuType: answers.pikachuType === 'Electric',
     minecraftStack: answers.minecraftStack === '64',
     villans: answers.villans !== undefined &&
       answers.villans.length === 2 &&
-      answers.villans.includes('bowser') &&
-      answers.villans.includes('ganondorf')
+      answers.villans.includes('Bowser') &&
+      answers.villans.includes('Ganondorf')
   }
 }

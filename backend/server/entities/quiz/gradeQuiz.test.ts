@@ -6,7 +6,7 @@ const gradeQuiz = (answers: QuizAnswers): QuizGrade => gradeQuizResolver({ args:
 describe('Test quiz grading resolver correctly grades', () => {
   describe('Mario', () => {
     test('Correct', () => {
-      const grade = gradeQuiz({ marioBrothersName: 'luigi' })
+      const grade = gradeQuiz({ marioBrothersName: 'Luigi' })
       expect(grade.marioBrothersName).toBe(true)
     })
 
@@ -23,7 +23,7 @@ describe('Test quiz grading resolver correctly grades', () => {
 
   describe('Pikachu', () => {
     test('Correct', () => {
-      const grade = gradeQuiz({ pikachuType: 'electric' })
+      const grade = gradeQuiz({ pikachuType: 'Electric' })
       expect(grade.pikachuType).toBe(true)
     })
 
@@ -57,32 +57,32 @@ describe('Test quiz grading resolver correctly grades', () => {
 
   describe('Villans', () => {
     test('Correct', () => {
-      const grade = gradeQuiz({ villans: ['bowser', 'ganondorf'] })
+      const grade = gradeQuiz({ villans: ['Bowser', 'Ganondorf'] })
       expect(grade.villans).toBe(true)
     })
 
     test('Swapped order', () => {
-      const grade = gradeQuiz({ villans: ['ganondorf', 'bowser'] })
+      const grade = gradeQuiz({ villans: ['Ganondorf', 'Bowser'] })
       expect(grade.villans).toBe(true)
     })
 
     test('Complete wrong answers', () => {
-      const grade = gradeQuiz({ villans: ['kirby', 'zelda'] })
+      const grade = gradeQuiz({ villans: ['Kirby', 'Zelda'] })
       expect(grade.villans).toBe(false)
     })
 
     test('Partial wrong answers', () => {
-      const grade = gradeQuiz({ villans: ['kirby', 'bowser'] })
+      const grade = gradeQuiz({ villans: ['Kirby', 'Bowser'] })
       expect(grade.villans).toBe(false)
     })
 
     test('Partial correct answers', () => {
-      const grade = gradeQuiz({ villans: ['bowser'] })
+      const grade = gradeQuiz({ villans: ['Bowser'] })
       expect(grade.villans).toBe(false)
     })
 
     test('Overincluded correct answers', () => {
-      const grade = gradeQuiz({ villans: ['bowser', 'ganondorf', 'metaknight'] })
+      const grade = gradeQuiz({ villans: ['Bowser', 'Ganondorf', 'Metaknight'] })
       expect(grade.villans).toBe(false)
     })
 
