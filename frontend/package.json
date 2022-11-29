@@ -27,7 +27,8 @@
     "testSummary": "jest --coverage --reporters=\"summary\"",
     "open-cov": "open ./coverage/lcov-report/index.html",
     "prepare": "cd .. && husky install frontend/.husky",
-    "lint": "ts-standard 2> /dev/null"
+    "lint": "ts-standard 2> /dev/null",
+    "ci": "npm run lint && jest"
   },
   "jest": {
     "preset": "ts-jest",
