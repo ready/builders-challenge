@@ -21,14 +21,14 @@ export default async function buildSchema (): Promise<GraphQLSchema | undefined>
 
       const typeDefsPath = path.join(entitiesPath, entityDirname, 'typeDefs.js')
       const resolversPath = path.join(entitiesPath, entityDirname, 'resolvers.js')
-    
+
       const typeDefs = await import(typeDefsPath)
       const resolvers = await import(resolversPath)
 
-      subschemas.push({ 
-        schema: makeExecutableSchema({ 
-          typeDefs: typeDefs.default.default, 
-          resolvers: resolvers.default.default 
+      subschemas.push({
+        schema: makeExecutableSchema({
+          typeDefs: typeDefs.default.default,
+          resolvers: resolvers.default.default
         })
       })
     }

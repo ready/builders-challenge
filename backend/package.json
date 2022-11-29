@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend for Ready Builders Challenge",
   "main": "build/index.js",
   "scripts": {
     "dev": "nodemon",

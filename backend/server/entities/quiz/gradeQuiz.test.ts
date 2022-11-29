@@ -60,32 +60,32 @@ describe('Test quiz grading resolver correctly grades', () => {
       const grade = gradeQuiz({ villans: ['Bowser', 'Ganondorf'] })
       expect(grade.villans).toBe(true)
     })
-  
+
     test('Swapped order', () => {
       const grade = gradeQuiz({ villans: ['Ganondorf', 'Bowser'] })
       expect(grade.villans).toBe(true)
     })
-  
+
     test('Complete wrong answers', () => {
       const grade = gradeQuiz({ villans: ['Kirby', 'Zelda'] })
       expect(grade.villans).toBe(false)
     })
-  
+
     test('Partial wrong answers', () => {
       const grade = gradeQuiz({ villans: ['Kirby', 'Bowser'] })
       expect(grade.villans).toBe(false)
     })
-  
+
     test('Partial correct answers', () => {
       const grade = gradeQuiz({ villans: ['Bowser'] })
       expect(grade.villans).toBe(false)
     })
-  
+
     test('Overincluded correct answers', () => {
       const grade = gradeQuiz({ villans: ['Bowser', 'Ganondorf', 'Metaknight'] })
       expect(grade.villans).toBe(false)
     })
-  
+
     test('Empty array', () => {
       const grade = gradeQuiz({ villans: [] })
       expect(grade.villans).toBe(false)
