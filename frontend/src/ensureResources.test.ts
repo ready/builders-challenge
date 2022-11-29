@@ -116,7 +116,7 @@ function getProjectFiles (): string[] {
  * @returns All files in the directory
  */
 function getFiles (dir: string): string[] {
-  const ignoredDirs = [path.join('src', 'test'), path.join('src', 'components', 'Checkout', 'tests')]
+  const ignoredDirs = [path.join('src', 'test')]
   // If the directory is in the ignored Dirs list, then don't check the contents
   if (ignoredDirs.some(ignoredDir => dir.endsWith(ignoredDir))) {
     return []
