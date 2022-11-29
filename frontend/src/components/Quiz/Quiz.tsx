@@ -6,7 +6,6 @@ import NumberedDivider from 'components/Common/NumberedDivider'
 import { useContainerDimensions } from 'hooks/useContainerDimensions'
 
 import { useQuizContext } from './QuizContext'
-
 import MarioBrothersName from './MarioBrotherName/MarioBrothersName'
 import PikachuType from './PikachuType/PikachuType'
 import MinecraftStack from './MinecraftStack/MinecraftStack'
@@ -38,7 +37,7 @@ const Quiz: React.FC = () => {
 
   // Calculate allowable scroll distance to always keep current step in view
   const curStepHeight = useContainerDimensions(scrollRefs[step]).height
-  const maxScrollHeight = window.innerHeight - 192 - curStepHeight
+  const maxScrollHeight = Math.max(window.innerHeight - 192 - curStepHeight, 0)
 
   return (
     <>

@@ -10,7 +10,6 @@ import styles from './Villans.module.css'
  */
 const Villans: React.FC = () => {
   const { answers } = useQuizContext()
-  console.log(answers.getVillans())
   const villanNames = Object.keys(VillanName).filter(key => isNaN(parseInt(key)))
 
   return (
