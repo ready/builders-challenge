@@ -1,18 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+
+import Loading from 'components/Common/Loading'
+
+import { GradeQuizExecutor, GradeQuizParams, GradeQuizResults, useGradeQuiz } from './QuizResultsContext.api'
 
 export interface QuizResultsContext {
-  answers: {
-    marioBrothersName?: string
-    pikachuType?: string
-    minecraftStack?: string
-    villans?: string[]
-  }
-  grades: {
-    marioBrothersName?: boolean
-    pikachuType?: boolean
-    minecraftStack?: boolean
-    villans?: boolean
-  }
+  answers: GradeQuizParams
+  grades: GradeQuizResults
+  gradeQuizCall: GradeQuizExecutor
+  setQuizAnswers: (answers: GradeQuizParams) => void
 }
 
 const quizResultsContext = React.createContext<QuizResultsContext>(undefined as unknown as QuizResultsContext)
@@ -41,9 +37,26 @@ interface QuizResultsProviderProps {
  * @prop `children` - react child components that we want to wrap inside of QuizResultsProvider
  */
 const QuizResultsProvider: React.FC<QuizResultsProviderProps> = props => {
+  const gradeQuizCall = useGradeQuiz()
+  const defaultAnswers: GradeQuizParams = {
+    marioBrothersName: undefined,
+    pikachuType: undefined,
+    minecraftStack: undefined,
+    villans: undefined
+  }
+
+  const [storedAnswers, setStoredAnswers] = useState(defaultAnswers)
+
   const value = {
-    answers: {},
-    grades: {}
+    answers: storedAnswers,
+    grades: gradeQuizCall[1].data?.gradeQuiz ?? {},
+    gradeQuizCall: gradeQuizCall[0],
+    setQuizAnswers: setStoredAnswers
+  }
+
+  // We want to show the user when the query is loading
+  if (gradeQuizCall[1].loading) {
+    return <Loading />
   }
 
   return (
