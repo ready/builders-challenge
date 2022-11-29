@@ -11,16 +11,24 @@ git clone https://github.com/ready/builders-challenge.git
 ### 2. Setup backend
 1. Navigate to backend directory
   - `cd backend` (assuming current working directory is builders-challenge)
+
 2. Install [docker](https://docs.docker.com/get-docker/)
+
 3. Start docker
-2. Start postgres and redis with docker compose
+
+4. Start postgres and redis with docker compose
   - `docker compose up`
-4. Install npm dependencies
+
+5. Copy `.env.keep` to `.env`
+  - `cp .env.keep .env`
+
+6. Install npm dependencies
   - `npm i`
 
-5. Run knex postgres migrations 
+7. Run knex postgres migrations 
   - `npm run knex migrate:latest`
-6. Start graphql webserver
+
+8. Start graphql webserver
   - `npm run dev`
 
 ### 3. Setup frontend
