@@ -44,6 +44,7 @@ git clone https://github.com/ready/builders-challenge.git
 - Your builders challenge invitation email should specify which challenges concern you
 
 ### 5. Submit your changes
+- Ensure that running `npm run ci` in both the frontend and backend passes
 - Complete your selected challenges by zipping up your local repository and replying to builders challenge invitation email with your zipped repository attatched
 
 ## Challenges
