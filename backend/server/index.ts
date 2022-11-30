@@ -5,7 +5,7 @@ import { knex } from 'knex'
 import knexConfig from '../knexfile'
 import buildSchema from './utils/buildSchema'
 
-async function main () {
+async function main (): Promise<void> {
   try {
     const PORT = 4000
 
@@ -21,15 +21,15 @@ async function main () {
     const schema = await buildSchema()
 
     // Server configuration
-    const yoga = createYoga({ 
-      schema,  
+    const yoga = createYoga({
+      schema,
       context // Set resolver context
     })
 
     // Create server
-    const server = createServer(yoga)
+    const server = createServer(yoga) // eslint-disable-line @typescript-eslint/no-misused-promises
 
-    // Start server 
+    // Start server
     server.listen(PORT, () => {
       console.info('Server is running on http://localhost:4000/graphql')
     })
@@ -38,4 +38,4 @@ async function main () {
   }
 }
 
-main()
+void main()
