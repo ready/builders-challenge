@@ -1,7 +1,7 @@
 import React, { ReactNode, useEffect, useRef } from 'react'
-
 import { Button } from 'antd'
 
+import { useQuizResultsContext } from 'context/QuizResultsContext'
 import NumberedDivider from 'components/Common/NumberedDivider'
 import { useContainerDimensions } from 'hooks/useContainerDimensions'
 
@@ -10,6 +10,7 @@ import MarioBrothersName from './MarioBrotherName/MarioBrothersName'
 import PikachuType from './PikachuType/PikachuType'
 import MinecraftStack from './MinecraftStack/MinecraftStack'
 import Villans from './Villans/Villans'
+import ThankYou from './Results/ThankYou'
 import styles from './Quiz.module.css'
 
 /**
@@ -17,8 +18,10 @@ import styles from './Quiz.module.css'
  * The application dynamically shows more steps as each one is completed
  */
 const Quiz: React.FC = () => {
-  const { stepper } = useQuizContext()
+  const { setQuizAnswers } = useQuizResultsContext()
+  const { stepper, answers } = useQuizContext()
   const step = stepper.getStep()
+
   const scrollRefs = [
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
@@ -39,17 +42,27 @@ const Quiz: React.FC = () => {
   const curStepHeight = useContainerDimensions(scrollRefs[step]).height
   const maxScrollHeight = Math.max(window.innerHeight - 192 - curStepHeight, 0)
 
+  const handleContinue = (): void => {
+    if (step === stepper.getEndStep() - 1) {
+      // Store the answers in a higher context for displaying on results page
+      setQuizAnswers(answers.getAnswers())
+    }
+
+    stepper.forward()
+  }
+
   return (
     <>
       <Step step={0} attachedRef={scrollRefs[0]}><MarioBrothersName /></Step>
       <Step step={1} attachedRef={scrollRefs[1]}><PikachuType /></Step>
       <Step step={2} attachedRef={scrollRefs[2]}><MinecraftStack /></Step>
       <Step step={3} attachedRef={scrollRefs[3]}><Villans /></Step>
+      <Step step={4} attachedRef={scrollRefs[4]}><ThankYou /></Step>
       <div className={styles.continueContain} style={{ marginBottom: `${maxScrollHeight}px` }}>
         <Button
           className={styles.continue}
           type='primary'
-          onClick={() => stepper.forward()}
+          onClick={handleContinue}
         >
           {step === stepper.getEndStep() - 1 ? 'Submit Answers' : 'Continue'}
         </Button>
