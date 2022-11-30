@@ -1,8 +1,8 @@
 import { createServer } from 'http'
 import { createYoga } from 'graphql-yoga'
-import { Knex, knex } from 'knex'
+import { knex } from 'knex'
 
-import knexConfig from './knexfile'
+import knexConfig from '../knexfile'
 import buildSchema from './utils/buildSchema'
 
 async function main () {
@@ -10,7 +10,7 @@ async function main () {
     const PORT = 4000
 
     // Create knex client
-    const knexClient = knex(knexConfig)
+    const knexClient = knex(knexConfig.development)
 
     // GraphQL resolver context
     const context = {

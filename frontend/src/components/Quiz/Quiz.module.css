@@ -1,0 +1,10 @@
+.continue {
+  max-width: 60%;
+  width: 100%;
+}
+.continueContain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}

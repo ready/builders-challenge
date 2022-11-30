@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  border-bottom: 1px solid var(--gray94);
+  z-index: 5;
+  position: fixed;
+  background-color: var(--gray100);
+  padding: 16px;
+  box-sizing: border-box;
+  height: 72px;
+}
+.menu {
+  width: auto;
+  border-bottom: none;
+  background: transparent;
+  box-shadow: none;
+  display: flex;
+  justify-content: flex-end;
+}
+.logOut {
+  position: absolute;
+  bottom: 8%;
+  left: 33.5%;
+  font-size: larger;
+}

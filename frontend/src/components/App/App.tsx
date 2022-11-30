@@ -6,6 +6,7 @@ import LandingPageWrapper from 'components/LandingPage/LandingPage'
 import ButtonWrapper from 'components/ButtonPage/Button'
 import Sample01Wrapper from 'components/SamplePage01/Page'
 import Sample02Wrapper from 'components/SamplePage02/Page'
+import Quiz from 'components/Quiz/QuizWrapper'
 import PageNotFound from 'components/Error/404'
 
 import ProjectPage from './ProjectPages'
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         <Route path={ProjectPage.Button} element={<RouteErrorBoundary><ButtonWrapper /></RouteErrorBoundary>} />
         <Route path={ProjectPage.Sample01} element={<RouteErrorBoundary><Sample01Wrapper /></RouteErrorBoundary>} />
         <Route path={ProjectPage.Sample02} element={<RouteErrorBoundary><Sample02Wrapper /></RouteErrorBoundary>} />
+        <Route path={ProjectPage.Quiz} element={<RouteErrorBoundary><Quiz /></RouteErrorBoundary>} />
         <Route path={ProjectPage.None} element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>

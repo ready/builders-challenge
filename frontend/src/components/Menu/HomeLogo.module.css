@@ -1,0 +1,6 @@
+.logo {
+  height: 56px;
+  margin: 8px auto 8px 0;
+  display: flex;
+  max-width: 220px;
+}

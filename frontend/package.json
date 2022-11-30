@@ -5,22 +5,13 @@
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@apollo/client": "^3.7.0",
-    "@hedgedoc/html-to-react": "^1.4.5",
     "antd": "^4.21.3",
-    "antd-mask-input": "^2.0.7",
     "apollo-upload-client": "^17.0.0",
-    "dompurify": "^2.4.0",
     "graphql": "^16.6.0",
-    "logrocket": "^3.0.1",
-    "marked": "^4.1.1",
-    "platform": "^1.3.6",
     "react": "^17.0.2",
-    "react-color": "^2.19.3",
     "react-dom": "^17.0.2",
-    "react-feather": "^2.0.10",
     "react-responsive": "^9.0.0",
-    "react-router-dom": "^6.4.2",
-    "react-uuid": "^2.0.0"
+    "react-router-dom": "^6.4.2"
   },
   "scripts": {
     "start": "vite",
@@ -35,10 +26,9 @@
     "test:staged": "jest --testPathIgnorePatterns=\"src/onMainMerge.test.ts\"",
     "testSummary": "jest --coverage --reporters=\"summary\"",
     "open-cov": "open ./coverage/lcov-report/index.html",
-    "deploy": "npm run build && y | gcloud app deploy",
-    "standard": "ts-standard",
     "prepare": "cd .. && husky install frontend/.husky",
-    "lint": "ts-standard 2> /dev/null"
+    "lint": "ts-standard 2> /dev/null",
+    "ci": "npm run lint && jest"
   },
   "jest": {
     "preset": "ts-jest",
@@ -81,15 +71,10 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^12.1.5",
     "@types/apollo-upload-client": "^17.0.1",
-    "@types/dompurify": "^2.3.4",
-    "@types/google-map-react": "^2.1.7",
     "@types/jest": "^29.2.2",
     "@types/madge": "^5.0.0",
-    "@types/marked": "^4.0.7",
     "@types/node": "^18.11.4",
-    "@types/platform": "^1.3.4",
     "@types/react": "^17.0.44",
-    "@types/react-color": "^3.0.6",
     "@types/react-dom": "^17.0.14",
     "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
