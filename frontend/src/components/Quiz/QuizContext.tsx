@@ -37,7 +37,7 @@ interface QuizProviderProps {
 const QuizProvider: React.FC<QuizProviderProps> = props => {
   const value = {
     answers: useQuizAnswers(),
-    stepper: useStepper(-1, 4)
+    stepper: useStepper(-1, 5)
   }
 
   return (
