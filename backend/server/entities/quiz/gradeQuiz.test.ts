@@ -11,7 +11,7 @@ describe('Test quiz grading resolver correctly grades', () => {
     })
 
     test('Incorrect', () => {
-      const grade = gradeQuiz({ marioBrothersName: 'waluigi' })
+      const grade = gradeQuiz({ marioBrothersName: 'Waluigi' })
       expect(grade.marioBrothersName).toBe(false)
     })
 
@@ -28,7 +28,7 @@ describe('Test quiz grading resolver correctly grades', () => {
     })
 
     test('Incorrect', () => {
-      const grade = gradeQuiz({ pikachuType: 'water' })
+      const grade = gradeQuiz({ pikachuType: 'Water' })
       expect(grade.pikachuType).toBe(false)
     })
 
