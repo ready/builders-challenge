@@ -1,19 +1,15 @@
 import React, { ReactNode } from 'react'
 
+import { CheckCircleTwoTone, CloseCircleFilled } from '@ant-design/icons'
+
+import truthy from 'utils/truthy'
 import { useQuizResultsContext } from 'context/QuizResultsContext'
 
-import GradeQuiz from './GradeQuiz'
-import { useQuizGraded } from './useQuizGraded'
-import { CheckCircleTwoTone, CloseCircleFilled } from '@ant-design/icons'
-import truthy from 'utils/truthy'
-
+/**
+ * Renders the results from the quiz on screen
+ */
 const Results: React.FC = () => {
-  const isQuizGraded = useQuizGraded()
   const { answers, grades } = useQuizResultsContext()
-
-  if (!isQuizGraded) {
-    return <GradeQuiz />
-  }
 
   const emptyVillans = answers.villans === undefined || answers.villans.length === 0
   const villansAnswer = emptyVillans ? 'None' : answers.villans?.reduce((sum, cur) => `${cur}, ${sum}`)
@@ -46,6 +42,12 @@ interface ResultProps {
   answer?: string
 }
 
+/**
+ * Renders a single result
+ * @prop `correct` - true if the answer was correct
+ * @prop `answer` - the answer given by the user
+ * @prop `children` - the label to display next to the answer
+ */
 const Result: React.FC<ResultProps> = props => (
   <p>
     <b>{props.children}:</b> {(props.answer ?? '') + ' '}
