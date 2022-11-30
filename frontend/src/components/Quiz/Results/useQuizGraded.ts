@@ -5,10 +5,7 @@ import { useQuizResultsContext } from 'context/QuizResultsContext'
  * @returns true if the quiz was already graded and the results are in the context
  */
 export const useQuizGraded = (): boolean => {
-  const { answers, grades } = useQuizResultsContext()
-
-  const isMissingAnswers = Object.keys(answers).some(a => (answers as any)[a] === undefined)
+  const { grades } = useQuizResultsContext()
   const isMissingGrades = Object.keys(grades).some(a => (grades as any)[a] === undefined)
-
-  return !isMissingAnswers && !isMissingGrades
+  return !isMissingGrades
 }
