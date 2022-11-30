@@ -49,7 +49,7 @@ const QuizResultsProvider: React.FC<QuizResultsProviderProps> = props => {
 
   const value = {
     answers: storedAnswers,
-    grades: gradeQuizCall[1].data?.gradeQuiz ?? {},
+    grades: gradeQuizCall[1].data?.gradeQuiz ?? defaultAnswers as GradeQuizResults,
     gradeQuizCall: gradeQuizCall[0],
     setQuizAnswers: setStoredAnswers
   }
