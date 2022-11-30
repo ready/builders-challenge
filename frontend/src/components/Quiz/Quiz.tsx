@@ -14,8 +14,7 @@ import ThankYou from './Results/ThankYou'
 import styles from './Quiz.module.css'
 
 /**
- * Renders the actual ACP application. The heart of Turnkey ACP
- * The application dynamically shows more steps as each one is completed
+ * Renders the quiz steps one at a time with automatic scrolling
  */
 const Quiz: React.FC = () => {
   const { setQuizAnswers } = useQuizResultsContext()
