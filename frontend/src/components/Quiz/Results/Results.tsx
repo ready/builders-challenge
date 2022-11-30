@@ -24,7 +24,7 @@ const Results: React.FC = () => {
         Mario's Brother's Name
       </Result>
       <Result correct={grades.pikachuType} answer={answers.pikachuType}>
-        Pikachu's Name
+        Pikachu's Type
       </Result>
       <Result correct={grades.minecraftStack} answer={answers.minecraftStack}>
         Minecraft's Max Stack Size
