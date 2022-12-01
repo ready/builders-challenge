@@ -71,3 +71,15 @@ git clone https://github.com/ready/builders-challenge.git
 ## Adding a new challenge
 - Make any changes to existing files and templates needed to complete the challenge
 - Write a detailed GitHub issue on how to complete the challenge and any additional initial setup instructions
+
+## Sending these challenges to a candidate
+### Template message
+Hi [CANDIDATE],
+
+You've been invited to complete a take home coding challenge designed to evaluate your general familiarity with the technologies we use, how you work, your process for problem solving, ability to adhere to standards, and ability to complete scale tasks similar to those you'd encounter on the job. These challenges are open ended on purpose, you are free to modify the template code and include additional dependencies as long as your solutions address the challenges you have selected to complete. 
+
+The repository and instructions for setup can be found at [https://github.com/ready/builders-challenge](https://github.com/ready/builders-challenge). There are 4 backend challenges and 5 frontend challenges which can be found at [https://github.com/ready/builders-challenge/issues](https://github.com/ready/builders-challenge/issues). Which challenges you complete is up to you however keep in mind some have dependent relationships requiring you to complete the prerequisite challenge before attempting. If you have any questions, concerns, or issues that arise during the completion of these challenges members of the Ready engineering team will be standing by to help on this repositories [gitter](https://github.com/ready/builders-challenge) channel.
+
+Best of luck and we hope to hear from you soon,
+
+[SENDER]
