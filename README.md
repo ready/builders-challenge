@@ -1,5 +1,8 @@
 # Builders Challenges
-Builders challenges for ready engineering candidates
+
+Take home coding challenges for ready engineering candidates
+
+[![Join the chat at https://gitter.im/builders-challenge/community](https://badges.gitter.im/builders-challenge/community.svg)](https://gitter.im/builders-challenge/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Getting setup
 
