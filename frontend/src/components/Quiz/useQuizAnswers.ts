@@ -14,6 +14,13 @@ export interface QuizAnswersHook {
 
   setVillans: (villans: any) => void
   getVillans: () => string[] | undefined
+
+  getAnswers: () => {
+    marioBrothersName?: string
+    pikachuType?: string
+    minecraftStack?: string
+    villans?: string[]
+  }
 }
 
 /**
@@ -37,6 +44,13 @@ export const useQuizAnswers = (): QuizAnswersHook => {
     getMinecraftStack: () => minecraftStack,
 
     setVillans,
-    getVillans: () => villans
+    getVillans: () => villans,
+
+    getAnswers: () => ({
+      marioBrothersName,
+      pikachuType: pikachusType?.toString(),
+      minecraftStack,
+      villans
+    })
   }
 }

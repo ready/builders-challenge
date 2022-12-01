@@ -12,7 +12,7 @@
     "ci": "npm run lint && npm run test",
     "knex": "knex"
   },
-  "author": "",
+  "author": "Ready",
   "license": "MIT",
   "dependencies": {
     "@graphql-tools/schema": "^9.0.9",

@@ -7,6 +7,7 @@ import Quiz from './Quiz'
 import QuizProvider, { useQuizContext } from './QuizContext'
 import Results from './Results/Results'
 import QuizIntro from './QuizIntro'
+import { useQuizGraded } from './Results/useQuizGraded'
 import styles from './QuizWrapper.module.css'
 
 /**
@@ -23,8 +24,19 @@ const QuizWrapper: React.FC = () => (
  * the intro, the quiz, or the results
  */
 const QuizPage: React.FC = () => {
+  const isQuizGraded = useQuizGraded()
   const { stepper } = useQuizContext()
   const step = stepper.getStep()
+
+  if (step === stepper.getEndStep() || isQuizGraded) {
+    return (
+      <MenuWrap active='Quiz'>
+        <div className={styles.menuContain}>
+          <Results />
+        </div>
+      </MenuWrap>
+    )
+  }
 
   if (step === -1) {
     return (
@@ -32,14 +44,6 @@ const QuizPage: React.FC = () => {
         <div className={styles.menuContain}>
           <QuizIntro />
         </div>
-      </MenuWrap>
-    )
-  }
-
-  if (step === stepper.getEndStep()) {
-    return (
-      <MenuWrap active='Quiz'>
-        <Results />
       </MenuWrap>
     )
   }
