@@ -65,6 +65,9 @@ git clone https://github.com/ready/builders-challenge.git
 - [🛠 Add input validation to the Quiz](https://github.com/ready/builders-challenge/issues/14)
 - [⚙️ Add automated testing for the Quiz](https://github.com/ready/builders-challenge/issues/15)
 
+## Data
+- [Move address coordinates to their associated building structure](https://github.com/ready/builders-challenge/issues/18)
+
 ## Completing these challenges
 - Clone this repository
 - Complete the challenges in question
