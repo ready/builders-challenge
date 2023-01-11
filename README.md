@@ -67,7 +67,7 @@ git clone https://github.com/ready/builders-challenge.git
 
 ## Data
 - [⚙️ Move address coordinates to their associated building structure](https://github.com/ready/builders-challenge/issues/18)
-- [⚙️ ISP plan by zip code] (https://github.com/ready/builders-challenge/issues/21)
+- [⚙️ ISP plan by zip code](https://github.com/ready/builders-challenge/issues/21)
 
 ## Completing these challenges
 - Clone this repository
