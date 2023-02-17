@@ -10,6 +10,7 @@ Take home coding challenges for ready engineering candidates
 ```
 git clone https://github.com/ready/builders-challenge.git
 ```
+**No need for backend or frontend set up for Data and Analysis challenges.**
 
 ### 2. Setup backend
 1. Navigate to backend directory
@@ -68,6 +69,9 @@ git clone https://github.com/ready/builders-challenge.git
 ## Data
 - [⚙️ Move address coordinates to their associated building structure](https://github.com/ready/builders-challenge/issues/18)
 - [⚙️ ISP plan by zip code](https://github.com/ready/builders-challenge/issues/21)
+
+## Analysis
+- [Classify unserved project areas](https://github.com/ready/builders-challenge/issues/27)
 
 ## Completing these challenges
 - Clone this repository
