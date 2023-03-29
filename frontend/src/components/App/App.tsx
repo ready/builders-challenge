@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import RouteErrorBoundary from 'components/Error/RouteErrorBoundary'
 import LandingPageWrapper from 'components/LandingPage/LandingPage'
-import ButtonWrapper from 'components/ButtonPage/Button'
+import ButtonWrapper from 'components/ButtonPage/ButtonPage'
 import Sample01Wrapper from 'components/SamplePage01/Page'
 import Sample02Wrapper from 'components/SamplePage02/Page'
 import Quiz from 'components/Quiz/QuizWrapper'
