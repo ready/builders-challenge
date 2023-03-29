@@ -21,6 +21,9 @@ const ButtonPage: React.FC = () => {
   )
 }
 
+/**
+ * Renders a collection of buttons with different types
+ */
 const ButtonTypes: React.FC = () => (
   <Card>
     <Row>
@@ -34,6 +37,9 @@ const ButtonTypes: React.FC = () => (
   </Card>
 )
 
+/**
+ * Renders a collection of buttons with different sizes
+ */
 const ButtonSizes: React.FC = () => (
   <Card>
     <Row>
@@ -44,6 +50,9 @@ const ButtonSizes: React.FC = () => (
   </Card>
 )
 
+/**
+ * Renders a collection of buttons with different statuses
+ */
 const ButtonStatuses: React.FC = () => (
   <Card>
     <Row>
@@ -55,6 +64,9 @@ const ButtonStatuses: React.FC = () => (
   </Card>
 )
 
+/**
+ * Renders a collection of buttons with different shapes for the icons
+ */
 const ButtonIcons: React.FC = () => (
   <Card>
     <Row>
@@ -65,6 +77,9 @@ const ButtonIcons: React.FC = () => (
   </Card>
 )
 
+/**
+ * Renders a collection of buttons that do different things when clicked
+ */
 const ButtonClick: React.FC = () => {
   const [count, setCount] = useState(0)
 
