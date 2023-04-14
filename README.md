@@ -20,11 +20,11 @@ git clone https://github.com/ready/builders-challenge.git
 
 3. Start docker
 
-4. Start postgres and redis with docker compose
-  - `docker compose up`
-
-5. Copy `.env.keep` to `.env`
+4. Copy `.env.keep` to `.env`
   - `cp .env.keep .env`
+
+5. Start postgres and redis with docker compose
+  - `docker compose up`
 
 6. Install npm dependencies
   - `npm i`
