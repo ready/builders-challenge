@@ -66,6 +66,9 @@ git clone https://github.com/ready/builders-challenge.git
 - [🛠 Add input validation to the Quiz](https://github.com/ready/builders-challenge/issues/14)
 - [⚙️ Add automated testing for the Quiz](https://github.com/ready/builders-challenge/issues/15)
 
+### Fullstack
+- [⚙️ Dynamic Map Rendering & Filtering](https://github.com/ready/builders-challenge/issues/42)
+
 ### Data
 - [⚙️ Move address coordinates to their associated building structure (level 1-2)](https://github.com/ready/builders-challenge/issues/18)
 - [⚙️ ISP plan by zip code (level 1-2)](https://github.com/ready/builders-challenge/issues/21)
