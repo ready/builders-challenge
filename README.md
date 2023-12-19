@@ -68,6 +68,7 @@ git clone https://github.com/ready/builders-challenge.git
 
 ### Fullstack
 - [⚙️ Dynamic Map Rendering & Filtering](https://github.com/ready/builders-challenge/issues/42)
+- [⚙️ Display Entities & add ability to create new ones](https://github.com/ready/builders-challenge/issues/45)
 
 ### Data
 - [⚙️ Move address coordinates to their associated building structure (level 1-2)](https://github.com/ready/builders-challenge/issues/18)
